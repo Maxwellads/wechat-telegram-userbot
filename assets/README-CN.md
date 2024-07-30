@@ -55,11 +55,11 @@ python3 run.py
 运行成功的话效果如下：
 <img src="assets/success.png">
 # Notes
-1. The run.py binds port 10000 to run a HTTP server for communicating with the RPA. Make sure that the port is free to bind, otherwise change the port in run.py. Future versions will allow changing port in config.json.
-2. You compyter MUST BE a SPARE one because RPA heavily relies on grahical interface. It is recommended that you disconnect any input hardwares such as keyboard and mouse to prevent unexpected scenarios, and only control you instance by remote desktop.
-3. I am NOT a coding guy. The python code was written by ChatGPT 3.5 with me debugging it, if you encounter any problem, feel free to ask.
-4. It is always recommended to run this program on a Windows instance, as ShadowBot has poor support on Linux, and run.py does not behave properly when using a proxy.
+1. Bot需要占用10000端口，通过HTTP和RPA机器人通信。如果端口不可用，则需要在run.py里修改。未来版本会允许在配置文件中指定端口。
+2. 跑这个的电脑必须是要一台平常不用的电脑，最好断开一切外设，只使用远程桌面操作。
+3. 这个代码全是ChatGPT 3.5写的, 我只会调试，随缘更新；
+4. 最好用一台Windows的电脑跑，影刀RPA的Linux支持不太好，而且Linux环境下必须要用Proxychains。
 
 # Bugs
-1. The bot does not connect to proxy servers when running on a Linux environment, instead it would do a direct connection. Cause is unknown. Temp Fix: Use proxychains.
-2. The bot might not be working anymore if kept running for a long time. Cause is to be verified. Temp Fix: Restart periodically. 
+1. 在Linux环境下运行时, 哪怕指定了代理服务器，Bot还是只会直连Telegram，原因未知。 临时解决方案: 在命令行中用Proxychains代理流量；
+2. 长期运行时Bot可能会显示“连接数已满”，原因待验证。临时解决方案: 定期重启。 
