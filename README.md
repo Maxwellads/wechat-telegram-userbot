@@ -1,5 +1,5 @@
-[中文](https://github.com/Maxwellads/telegram-wechat-rpa/blob/main/assets/README-CN.md)
-# telegram-wechat-rpa
+[中文](https://github.com/Maxwellads/wechat-telegram-userbot/blob/main/assets/README-CN.md)
+# Wechat Telegram Userbot
 Feeling tired of WeChat running on your phone and draining your battery? By this tool, you can throw WeChat into work profile and freeze them without missing messages!
 
 # Requirements
@@ -21,11 +21,11 @@ sudo apt install proxychains
 ```
 And these python moudles:
 ```shell
-pip install json os logging asyncio aiohttp datetime python-telegram-bot python-telegram-bot[socks] python-telegram-bot[job-queue]
+pip install json os logging asyncio aiohttp datetime python-telegram-bot python-telegram-bot[socks] python-telegram-bot[job-queue] websockets re
 ```
 *You can also configure a python venv if you like. See: [Python venv](https://docs.python.org/3/library/venv.html)*
 ## Configuration
-Of course you will need to clone and cd to this repo.
+Clone and cd to this repo.
 ```shell
 git clone https://github.com/Maxwellads/telegram-wechat-rpa
 cd telegram-wechat-rpa
@@ -48,9 +48,11 @@ python3 run.py
 You can also check the bot's status by sending /status to the bot in chat.
 
 Now you will need to download ShadowBot: [影刀RPA](https://www.yingdao.com/client-download/)
-After registing your account, you can acquire this project from here: [Wechat_TG](https://api.winrobot360.com/redirect/robot/share?inviteKey=07ce853e3e7bbf48)
+After registing your account, you can acquire this project from here: [Wechat_TG_NEXT](https://api.winrobot360.com/redirect/robot/share?inviteKey=00f617c4434bea1b)
 
-Then click this button to execute the RPA:
+**Please note that this help document assume that you run both the RPA App and the Python Bot on the same instance. If not, you will need to configure a tunnel (such as Kcptun) from localhost:10000 to [Target_IP]:10000.**
+
+Then click this button to execute the RPA App:
 <img src="assets/execute.png">
 
 # Notes
